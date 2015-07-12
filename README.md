@@ -11,3 +11,7 @@ Useful links:
 When things go wrong:
 
 - [How do deal with a corrupted zip file `jar xvf`](http://askubuntu.com/questions/54904/unzip-error-end-of-central-directory-signature-not-found)
+
+Writing and Presentaiton Tips
+
+- [Why slidedecks matter](http://abovethecrowd.com/2015/07/07/in-defense-of-the-deck/)
