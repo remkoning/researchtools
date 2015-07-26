@@ -8,6 +8,12 @@ Useful links:
 - [Markdown Cheatsheet](https://help.github.com/articles/markdown-basics/)
 - [GitHub Markdown](https://help.github.com/articles/github-flavored-markdown/)
 
+Necessary R Packages:
+
+- [GGally: Exploratory matrix-plots with correlations and density.  Must have.](https://cran.r-project.org/web/packages/GGally/index.html)
+- [magrittr: Magical %>% pipes to make readable and clean code](https://github.com/smbache/magrittr)
+- [dplyr: wrangle all the datas](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+
 When things go wrong:
 
 - [How do deal with a corrupted zip file `jar xvf`](http://askubuntu.com/questions/54904/unzip-error-end-of-central-directory-signature-not-found)
