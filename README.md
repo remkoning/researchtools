@@ -14,6 +14,10 @@ Necessary R Packages:
 - [magrittr: Magical %>% pipes to make readable and clean code](https://github.com/smbache/magrittr)
 - [dplyr: wrangle all the datas](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
 
+Learning Statistics:
+
+- [Generalized Additive Models](http://multithreaded.stitchfix.com/blog/2015/07/30/gam/)
+
 When things go wrong:
 
 - [How do deal with a corrupted zip file `jar xvf`](http://askubuntu.com/questions/54904/unzip-error-end-of-central-directory-signature-not-found)
