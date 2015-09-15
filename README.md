@@ -17,7 +17,7 @@ Necessary R Packages:
 Learning Statistics:
 
 - [Generalized Additive Models](http://multithreaded.stitchfix.com/blog/2015/07/30/gam/)
-
+- [How to Match Data (don't use PSMs)](https://www.youtube.com/watch?v=rBv39pK1iEs)
 When things go wrong:
 
 - [How do deal with a corrupted zip file `jar xvf`](http://askubuntu.com/questions/54904/unzip-error-end-of-central-directory-signature-not-found)
