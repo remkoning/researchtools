@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://rstudio.github.io/tufte/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__rstudio_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="generator" content="pandoc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="JJ Allaire and Yihui Xie">
+
+<meta name="date" content="2016-02-05">
+
+<title>Tufte Handout</title>
+
+<link href="./Tufte Handout_files/tufte.css" rel="stylesheet">
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="./Tufte Handout_files/default.css" type="text/css">
+<script src="./Tufte Handout_files/highlight.js"></script>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<script type="text/javascript" src="./Tufte Handout_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body data-gr-c-s-loaded="true"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+<div class="fluid-row" id="header">
+
+
+<h1 class="title">Tufte Handout</h1>
+<h3 class="subtitle"><em>An implementation in R Markdown</em></h3>
+<h4 class="author"><em>JJ Allaire and Yihui Xie</em></h4>
+<h4 class="date"><em>2016-02-05</em></h4>
+
+</div>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> See Github repositories <a href="https://github.com/tufte-latex/tufte-latex">tufte-latex</a> and <a href="https://github.com/edwardtufte/tufte-css">tufte-css</a></span>, respectively. We have ported both implementations into the <a href="https://github.com/rstudio/tufte"><strong>tufte</strong> package</a>. If you want LaTeX/PDF output, you may use the <code>tufte_handout</code> format for handouts, and <code>tufte_book</code> for books. For HTML output, use <code>tufte_html</code>. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the <code>rmarkdown::render()</code> function. See <span class="citation">Allaire et al. (<label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle">2015<span class="marginnote">Allaire, JJ, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2015. <em>Rmarkdown: Dynamic Documents for R</em>. <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com</a>.</span>)</span> more information about <strong>rmarkdown</strong>.</p>
+<pre class="yaml"><code>---
+title: "An Example Using the Tufte Style"
+author: "John Smith"
+output:
+  tufte::tufte_handout: default
+  tufte::tufte_html: default
+---</code></pre>
+<p>There are two goals of this package:</p>
+<ol style="list-style-type: decimal">
+<li>To produce both PDF and HTML output with similar styles from the same R Markdown document;</li>
+<li>To provide simple syntax to write elements of the Tufte style such as side notes and margin figures, e.g.&nbsp;when you want a margin figure, all you need to do is the chunk option <code>fig.margin = TRUE</code>, and we will take care of the deails for you, so you never need to think about <code>\begin{marginfigure} \end{marginfigure}</code> or <code>&lt;span class="marginfigure"&gt; &lt;/span&gt;</code>; the LaTeX and HTML code under the hood may be complicated, but you never need to learn or write such code.</li>
+</ol>
+<p>If you have any feature requests or find bugs in <strong>tufte</strong>, please do not hesitate to file them to <a href="https://github.com/rstudio/tufte/issues" class="uri">https://github.com/rstudio/tufte/issues</a>. For general questions, you may ask them on StackOverflow: <a href="http://stackoverflow.com/tags/rmarkdown" class="uri">http://stackoverflow.com/tags/rmarkdown</a>.</p>
+</div>
+<div id="headings" class="section level1">
+<h1>Headings</h1>
+<p>This style provides first and second-level headings (that is, <code>#</code> and <code>##</code>), demonstrated in the next section. You may get unexpected output if you try to use <code>###</code> and smaller headings.</p>
+<p><span class="newthought">In his later books</span><label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> <a href="http://www.edwardtufte.com/tufte/books_be">Beautiful Evidence</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, call the <code>newthought()</code> function in <strong>tufte</strong> in an <em>inline R expression</em> <code>`r `</code> as demonstrated at the beginning of this paragraph.<label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> Note you should not assume <strong>tufte</strong> has been attached to your R session. You should either <code>library(tufte)</code> in your R Markdown document before you call <code>newthought()</code>, or use <code>tufte::newthought()</code>.</span></p>
+</div>
+<div id="figures" class="section level1">
+<h1>Figures</h1>
+<div id="margin-figures" class="section level2">
+<h2>Margin Figures</h2>
+<p>Images and graphics play an integral role in Tufte’s work. To place figures in the margin you can use the <strong>knitr</strong> chunk option <code>fig.margin = TRUE</code>. For example:</p>
+<p>
+<span class="marginnote shownote"><!--
+<div class="figure">--> <img src="./Tufte Handout_files/fig-margin-1.png" alt="MPG vs horsepower, colored by transmission." width="336"> <!--
+<p class="caption marginnote">-->MPG vs horsepower, colored by transmission.<!--</p>--> <!--</div>--></span>
+</p>
+<pre class="r"><code class="r"><span class="keyword">library</span><span class="paren">(</span><span class="identifier">ggplot2</span><span class="paren">)</span>
+<span class="identifier">mtcars2</span> <span class="operator">&lt;-</span> <span class="identifier">mtcars</span>
+<span class="identifier">mtcars2</span><span class="operator">$</span><span class="identifier">am</span> <span class="operator">&lt;-</span> <span class="identifier">factor</span><span class="paren">(</span>
+  <span class="identifier">mtcars</span><span class="operator">$</span><span class="identifier">am</span>, <span class="identifier">labels</span> <span class="operator">=</span> <span class="identifier">c</span><span class="paren">(</span><span class="string">'automatic'</span>, <span class="string">'manual'</span><span class="paren">)</span>
+<span class="paren">)</span>
+<span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">mtcars2</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">hp</span>, <span class="identifier">mpg</span>, <span class="identifier">color</span> <span class="operator">=</span> <span class="identifier">am</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">geom_point</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">theme</span><span class="paren">(</span><span class="identifier">legend.position</span> <span class="operator">=</span> <span class="string">'bottom'</span><span class="paren">)</span></code></pre>
+<p>Note the use of the <code>fig.cap</code> chunk option to provide a figure caption. You can adjust the proportions of figures using the <code>fig.width</code> and <code>fig.height</code> chunk options. These are specified in inches, and will be automatically scaled down to fit within the handout margin.</p>
+</div>
+<div id="arbitrary-margin-content" class="section level2">
+<h2>Arbitrary Margin Content</h2>
+<p>In fact, you can include anything in the margin using the <strong>knitr</strong> engine named <code>marginfigure</code>. Unlike R code chunks <code>```{r}</code>, you write a chunk starting with <code>```{marginfigure}</code> instead, then put the content in the chunk. See an example on the right about the first fundamental theorem of calculus.</p>
+<p><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote"><span style="display: block;">We know from <em>the first fundamental theorem of calculus</em> that for <span class="math inline"><em>x</em></span> in <span class="math inline">[<em>a</em>, <em>b</em>]</span>: <br><span class="math display"><span class="math display"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msubsup&gt;&lt;mo&gt;&amp;#x222B;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mspace width=&quot;thinmathspace&quot; /&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" role="math" style="width: 10.167em; display: inline-block;"><span style="display: inline-block; position: relative; width: 10.546em; height: 0px; font-size: 96%;"><span style="position: absolute; clip: rect(2.465em 1010.48em 5.306em -999.997em); top: -4.1em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mfrac" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 1.076em; height: 0px; margin-right: 0.129em; margin-left: 0.129em;"><span style="position: absolute; clip: rect(3.097em 1000.51em 4.17em -999.997em); top: -4.669em; left: 50%; margin-left: -0.249em;"><span class="mi" id="MathJax-Span-4" style="font-family: STIXGeneral-Italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 3.98em;"></span></span><span style="position: absolute; clip: rect(3.097em 1000.95em 4.17em -999.997em); top: -3.28em; left: 50%; margin-left: -0.502em;"><span class="mrow" id="MathJax-Span-5"><span class="mi" id="MathJax-Span-6" style="font-family: STIXGeneral-Italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-7" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.98em;"></span></span><span style="position: absolute; clip: rect(0.824em 1001.08em 1.266em -999.997em); top: -1.259em; left: 0.003em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0.003em; border-top-width: 1.3px; border-top-style: solid; width: 1.076em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.076em;"></span></span></span></span><span class="mrow" id="MathJax-Span-8"><span class="mo" id="MathJax-Span-9" style="vertical-align: -0.565em;"><span style="font-family: STIXSizeThreeSym;">(</span></span><span class="msubsup" id="MathJax-Span-10"><span style="display: inline-block; position: relative; width: 1.645em; height: 0px;"><span style="position: absolute; clip: rect(2.402em 1001.01em 5.054em -999.997em); top: -3.974em; left: 0.003em;"><span class="mo" id="MathJax-Span-11" style="font-family: STIXIntegralsD; vertical-align: -0.628em;">∫<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.445em;"></span></span><span style="display: inline-block; width: 0px; height: 3.98em;"></span></span><span style="position: absolute; clip: rect(3.475em 1000.38em 4.17em -999.997em); top: -5.11em; left: 1.203em;"><span class="texatom" id="MathJax-Span-12"><span class="mrow" id="MathJax-Span-13"><span class="mi" id="MathJax-Span-14" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.98em;"></span></span><span style="position: absolute; clip: rect(3.475em 1000.45em 4.17em -999.997em); top: -3.027em; left: 0.571em;"><span class="texatom" id="MathJax-Span-15"><span class="mrow" id="MathJax-Span-16"><span class="mi" id="MathJax-Span-17" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">a</span></span></span><span style="display: inline-block; width: 0px; height: 3.98em;"></span></span></span></span><span class="mi" id="MathJax-Span-18" style="font-family: STIXGeneral-Italic; padding-left: 0.193em;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.129em;"></span></span><span class="mo" id="MathJax-Span-19" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-20" style="font-family: STIXGeneral-Italic;">u</span><span class="mo" id="MathJax-Span-21" style="font-family: STIXGeneral-Regular;">)</span><span class="mspace" id="MathJax-Span-22" style="height: 0.003em; vertical-align: 0.003em; width: 0.193em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-23" style="font-family: STIXGeneral-Italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-24" style="font-family: STIXGeneral-Italic;">u</span><span class="mo" id="MathJax-Span-25" style="vertical-align: -0.565em;"><span style="font-family: STIXSizeThreeSym;">)</span></span></span><span class="mo" id="MathJax-Span-26" style="font-family: STIXGeneral-Regular; padding-left: 0.319em;">=</span><span class="mi" id="MathJax-Span-27" style="font-family: STIXGeneral-Italic; padding-left: 0.319em;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.129em;"></span></span><span class="mo" id="MathJax-Span-28" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-29" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-30" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-31" style="font-family: STIXGeneral-Regular;">.</span></span><span style="display: inline-block; width: 0px; height: 4.107em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.027em; border-left-width: 0px; border-left-style: solid; width: 0px; height: 2.488em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><msubsup><mo>∫</mo><mrow class="MJX-TeXAtom-ORD"><mi>a</mi></mrow><mrow class="MJX-TeXAtom-ORD"><mi>x</mi></mrow></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mi>d</mi><mi>u</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).</script></span></span><br></span></span></p>
+<p>For the sake of portability between LaTeX and HTML, you should keep the margin content as simple as possible (syntax-wise) in the <code>marginefigure</code> blocks. You may use simple Markdown syntax like <code>**bold**</code> and <code>_italic_</code> text, but please refrain from using footnotes, citations, or block-level elements (e.g.&nbsp;blockquotes and lists) there.</p>
+</div>
+<div id="full-width-figures" class="section level2">
+<h2>Full Width Figures</h2>
+<p>You can arrange for figures to span across the entire page by using the chunk option <code>fig.fullwidth = TRUE</code>.</p>
+<pre class="r"><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">diamonds</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">carat</span>, <span class="identifier">price</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">facet_grid</span><span class="paren">(</span><span class="operator">~</span> <span class="identifier">cut</span><span class="paren">)</span></code></pre>
+<div class="figure fullwidth">
+<img src="./Tufte Handout_files/fig-fullwidth-1.png" alt="A full width figure." width="960">
+<p class="caption marginnote shownote">
+A full width figure.
+</p>
+</div>
+<p>Other chunk options related to figures can still be used, such as <code>fig.width</code>, <code>fig.cap</code>, <code>out.width</code>, and so on. For full width figures, usually <code>fig.width</code> is large and <code>fig.height</code> is small. In the above example, the plot size is <span class="math inline"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-32" role="math" style="width: 2.582em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.681em; height: 0px; font-size: 96%;"><span style="position: absolute; clip: rect(1.639em 1002.63em 2.681em -999.998em); top: -2.478em; left: 0.002em;"><span class="mrow" id="MathJax-Span-33"><span class="mn" id="MathJax-Span-34" style="font-family: STIXGeneral-Regular;">10</span><span class="mo" id="MathJax-Span-35" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">×</span><span class="mn" id="MathJax-Span-36" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">2</span></span><span style="display: inline-block; width: 0px; height: 2.483em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.093em; border-left-width: 0px; border-left-style: solid; width: 0px; height: 0.764em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>×</mo><mn>2</mn></math></span></span><script type="math/tex" id="MathJax-Element-2">10 \times 2</script></span>.</p>
+</div>
+<div id="main-column-figures" class="section level2">
+<h2>Main Column Figures</h2>
+<p>Besides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.</p>
+<pre class="r"><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">diamonds</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">cut</span>, <span class="identifier">price</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_boxplot</span><span class="paren">(</span><span class="paren">)</span></code></pre>
+<div class="figure">
+<p class="caption marginnote shownote">
+A figure in the main column.
+</p>
+<img src="./Tufte Handout_files/fig-main-1.png" alt="A figure in the main column." width="672">
+</div>
+</div>
+</div>
+<div id="sidenotes" class="section level1">
+<h1>Sidenotes</h1>
+<p>One of the most prominent and distinctive features of this style is the extensive use of sidenotes. There is a wide margin to provide ample room for sidenotes and small figures. Any use of a footnote will automatically be converted to a sidenote.<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> This is a sidenote that was entered using a footnote.</span></p>
+<p>If you’d like to place ancillary information in the margin without the sidenote mark (the superscript number), you can use the <code>margin_note()</code> function from <strong>tufte</strong> in an inline R expression. <label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote">This is a margin note. Notice that there is no number preceding the note.</span> This function does not process the text with Pandoc, so Markdown syntax will not work here. If you need to write anything in Markdown syntax, please use the <code>marginfigure</code> block described previously.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>References can be displayed as margin notes for HTML output. For example, we can cite R here <span class="citation">(R Core Team <label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle">2015<span class="marginnote">R Core Team. 2015. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.r-project.org/" class="uri">https://www.R-project.org/</a>.</span>)</span>. To enable this feature, you must set <code>link-citations: yes</code> in the YAML metadata, and the version of <code>pandoc-citeproc</code> should be at least 0.7.2. You can always install your own version of Pandoc from <a href="http://pandoc.org/installing.html" class="uri">http://pandoc.org/installing.html</a> if the version is not sufficient. To check the version of <code>pandoc-citeproc</code> in your system, you may run this in R:</p>
+<pre class="r"><code class="r"><span class="identifier">system2</span><span class="paren">(</span><span class="string">'pandoc-citeproc'</span>, <span class="string">'--version'</span><span class="paren">)</span></code></pre>
+<p>If your version of <code>pandoc-citeproc</code> is too low, or you did not set <code>link-citations: yes</code> in YAML, references in the HTML output will be placed at the end of the output document.</p>
+</div>
+<div id="tables" class="section level1">
+<h1>Tables</h1>
+<p>You can use the <code>kable()</code> function from the <strong>knitr</strong> package to format tables that integrate well with the rest of the Tufte handout style. The table captions are placed in the margin like figures in the HTML output.</p>
+<pre class="r"><code class="r"><span class="identifier">knitr</span><span class="operator">:</span><span class="operator">:</span><span class="identifier">kable</span><span class="paren">(</span>
+  <span class="identifier">mtcars</span><span class="paren">[</span><span class="number">1</span><span class="operator">:</span><span class="number">6</span>, <span class="number">1</span><span class="operator">:</span><span class="number">6</span><span class="paren">]</span>, <span class="identifier">caption</span> <span class="operator">=</span> <span class="string">'A subset of mtcars.'</span>
+<span class="paren">)</span></code></pre>
+<p><!--
+<caption>--><span class="marginnote shownote">A subset of mtcars.</span><!--</caption>--></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+</tr>
+<tr class="even">
+<td align="left">Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+</tr>
+<tr class="odd">
+<td align="left">Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+</tr>
+<tr class="even">
+<td align="left">Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+</tr>
+<tr class="odd">
+<td align="left">Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+</tr>
+<tr class="even">
+<td align="left">Valiant</td>
+<td align="right">18.1</td>
+<td align="right">6</td>
+<td align="right">225</td>
+<td align="right">105</td>
+<td align="right">2.76</td>
+<td align="right">3.460</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="block-quotes" class="section level1">
+<h1>Block Quotes</h1>
+<p>We know from the Markdown syntax that paragraphs that start with <code>&gt;</code> are converted to block quotes. If you want to add a right-aligned footer for the quote, you may use the function <code>quote_footer()</code> from <strong>tufte</strong> in an inline R expression. Here is an example:</p>
+<blockquote>
+<p>“If it weren’t for my lawyer, I’d still be in prison. It went a lot faster with two people digging.”</p>
+<footer>
+— Joe Martin
+</footer>
+</blockquote>
+<p>Without using <code>quote_footer()</code>, it looks like this (the second line is just a normal paragraph):</p>
+<blockquote>
+<p>“Great people talk about ideas, average people talk about things, and small people talk about wine.”</p>
+<p>— Fran Lebowitz</p>
+</blockquote>
+</div>
+<div id="responsiveness" class="section level1">
+<h1>Responsiveness</h1>
+<p>The HTML page is responsive in the sense that when the page width is smaller than 760px, sidenotes and margin notes will be hidden by default. For sidenotes, you can click their numbers (the superscripts) to toggle their visibility. For margin notes, you may click the circled plus signs to toggle visibility.</p>
+</div>
+<div id="more-examples" class="section level1">
+<h1>More Examples</h1>
+<p>The rest of this document consists of a few test cases to make sure everything still works well in slightly more complicated scenarios. First we generate two plots in one figure environment with the chunk option <code>fig.show = 'hold'</code>:</p>
+<pre class="r"><code class="r"><span class="identifier">p</span> <span class="operator">&lt;-</span> <span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">mtcars2</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">hp</span>, <span class="identifier">mpg</span>, <span class="identifier">color</span> <span class="operator">=</span> <span class="identifier">am</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">geom_point</span><span class="paren">(</span><span class="paren">)</span>
+<span class="identifier">p</span>
+<span class="identifier">p</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="paren">)</span></code></pre>
+<div class="figure">
+<p class="caption marginnote shownote">
+Two plots in one figure environment.
+</p>
+<img src="./Tufte Handout_files/fig-two-together-1.png" alt="Two plots in one figure environment." width="672"><img src="./Tufte Handout_files/fig-two-together-2.png" alt="Two plots in one figure environment." width="672">
+</div>
+<p>Then two plots in separate figure environments (the code is identical to the previous code chunk, but the chunk option is the default <code>fig.show = 'asis'</code> now):</p>
+<pre class="r"><code class="r"><span class="identifier">p</span> <span class="operator">&lt;-</span> <span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">mtcars2</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">hp</span>, <span class="identifier">mpg</span>, <span class="identifier">color</span> <span class="operator">=</span> <span class="identifier">am</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">geom_point</span><span class="paren">(</span><span class="paren">)</span>
+<span class="identifier">p</span></code></pre>
+<div class="figure">
+<p class="caption marginnote shownote">
+Two plots in separate figure environments (the first plot).
+</p>
+<img src="./Tufte Handout_files/fig-two-separate-1.png" alt="Two plots in separate figure environments (the first plot)." width="672">
+</div>
+<pre class="r"><code class="r"><span class="identifier">p</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="paren">)</span></code></pre>
+<div class="figure">
+<p class="caption marginnote shownote">
+Two plots in separate figure environments (the second plot).
+</p>
+<img src="./Tufte Handout_files/fig-two-separate-2.png" alt="Two plots in separate figure environments (the second plot)." width="672">
+</div>
+<p>You may have noticed that the two figures have different captions, and that is because we used a character vector of length 2 for the chunk option <code>fig.cap</code> (something like <code>fig.cap = c('first plot', 'second plot')</code>).</p>
+<p>Next we show multiple plots in margin figures. Similarly, two plots in the same figure environment in the margin:</p>
+<p>
+<span class="marginnote shownote"><!--
+<div class="figure">--> <img src="./Tufte Handout_files/fig-margin-together-1.png" alt="Two plots in one figure environment in the margin." width="336"><img src="./Tufte Handout_files/fig-margin-together-2.png" alt="Two plots in one figure environment in the margin." width="336"> <!--
+<p class="caption marginnote">-->Two plots in one figure environment in the margin.<!--</p>--> <!--</div>--></span>
+</p>
+<pre class="r"><code class="r"><span class="identifier">p</span>
+<span class="identifier">p</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="identifier">method</span> <span class="operator">=</span> <span class="string">'lm'</span><span class="paren">)</span></code></pre>
+<p>Then two plots from the same code chunk placed in different figure environments:</p>
+<pre class="r"><code class="r"><span class="identifier">knitr</span><span class="operator">:</span><span class="operator">:</span><span class="identifier">kable</span><span class="paren">(</span><span class="identifier">head</span><span class="paren">(</span><span class="identifier">iris</span>, <span class="number">15</span><span class="paren">)</span><span class="paren">)</span></code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.6</td>
+<td align="right">3.4</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.0</td>
+<td align="right">3.4</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.4</td>
+<td align="right">2.9</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.7</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.8</td>
+<td align="right">3.4</td>
+<td align="right">1.6</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.8</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.3</td>
+<td align="right">3.0</td>
+<td align="right">1.1</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.8</td>
+<td align="right">4.0</td>
+<td align="right">1.2</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>
+<span class="marginnote shownote"><!--
+<div class="figure">--> <img src="./Tufte Handout_files/fig-margin-separate-1.png" alt="Two plots in separate figure environments in the margin (the first plot)." width="336"> <!--
+<p class="caption marginnote">-->Two plots in separate figure environments in the margin (the first plot).<!--</p>--> <!--</div>--></span>
+</p>
+<pre class="r"><code class="r"><span class="identifier">p</span></code></pre>
+<pre class="r"><code class="r"><span class="identifier">knitr</span><span class="operator">:</span><span class="operator">:</span><span class="identifier">kable</span><span class="paren">(</span><span class="identifier">head</span><span class="paren">(</span><span class="identifier">iris</span>, <span class="number">12</span><span class="paren">)</span><span class="paren">)</span></code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.6</td>
+<td align="right">3.4</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.0</td>
+<td align="right">3.4</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.4</td>
+<td align="right">2.9</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.1</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.4</td>
+<td align="right">3.7</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.8</td>
+<td align="right">3.4</td>
+<td align="right">1.6</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>
+<span class="marginnote shownote"><!--
+<div class="figure">--> <img src="./Tufte Handout_files/fig-margin-separate-2.png" alt="Two plots in separate figure environments in the margin (the second plot)." width="336"> <!--
+<p class="caption marginnote">-->Two plots in separate figure environments in the margin (the second plot).<!--</p>--> <!--</div>--></span>
+</p>
+<pre class="r"><code class="r"><span class="identifier">p</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="identifier">method</span> <span class="operator">=</span> <span class="string">'lm'</span><span class="paren">)</span></code></pre>
+<pre class="r"><code class="r"><span class="identifier">knitr</span><span class="operator">:</span><span class="operator">:</span><span class="identifier">kable</span><span class="paren">(</span><span class="identifier">head</span><span class="paren">(</span><span class="identifier">iris</span>, <span class="number">5</span><span class="paren">)</span><span class="paren">)</span></code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>We blended some tables in the above code chunk only as <em>placeholders</em> to make sure there is enough vertical space among the margin figures, otherwise they will be stacked tightly together. For a practical document, you should not insert too many margin figures consecutively and make the margin crowded.</p>
+<p>You do not have to assign captions to figures. We show three figures with no captions below in the margin, in the main column, and in full width, respectively.</p>
+<p>
+<span class="marginnote shownote"><!--
+<div class="figure">--> <img src="./Tufte Handout_files/fig-nocap-margin-1.png" alt=" " width="336"> <!--
+<p class="caption marginnote">--> <!--</p>--> <!--</div>--></span>
+</p>
+<pre class="r"><code class="r"><span class="comment"># a boxplot of weight vs transmission; this figure</span>
+<span class="comment"># will be placed in the margin</span>
+<span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">mtcars2</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">am</span>, <span class="identifier">wt</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_boxplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">coord_flip</span><span class="paren">(</span><span class="paren">)</span></code></pre>
+<pre class="r"><code class="r"><span class="comment"># a figure in the main column</span>
+<span class="identifier">p</span> <span class="operator">&lt;-</span> <span class="identifier">ggplot</span><span class="paren">(</span><span class="identifier">mtcars</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">wt</span>, <span class="identifier">hp</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_point</span><span class="paren">(</span><span class="paren">)</span>
+<span class="identifier">p</span></code></pre>
+<p><img src="./Tufte Handout_files/fig-nocap-main-1.png" title="" alt="" width="672"></p>
+<pre class="r"><code class="r"><span class="comment"># a fullwidth figure</span>
+<span class="identifier">p</span> <span class="operator">+</span> <span class="identifier">geom_smooth</span><span class="paren">(</span><span class="identifier">method</span> <span class="operator">=</span> <span class="string">'lm'</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">facet_grid</span><span class="paren">(</span><span class="operator">~</span> <span class="identifier">gear</span><span class="paren">)</span></code></pre>
+<div class="figure fullwidth">
+<img src="./Tufte Handout_files/fig-nocap-fullwidth-1.png" alt=" " width="960">
+<p class="caption marginnote shownote">
+</p>
+</div>
+</div>
+<div id="some-notes-on-tufte-css" class="section level1">
+<h1>Some Notes on Tufte CSS</h1>
+<p>There are a few other things in Tufte CSS that we have not mentioned so far. If you prefer <span class="sans">sans-serif fonts</span>, use the function <code>sans_serif()</code> in <strong>tufte</strong>. For epigraphs, you may use a pair of underscores to make the paragraph italic in a block quote, e.g.</p>
+<blockquote>
+<p><em>I can win an argument on any topic, against any opponent. People know this, and steer clear of me at parties. Often, as a sign of their great respect, they don’t even invite me.</em></p>
+<footer>
+— Dave Barry
+</footer>
+</blockquote>
+<p>We hope you will enjoy the simplicity of R Markdown and this R package, and we sincerely thank the authors of the Tufte-CSS and Tufte-LaTeX projects for developing the beautiful CSS and LaTeX classes. Our <strong>tufte</strong> package would not have been possible without their heavy lifting.</p>
+<p>To see the R Markdown source of this example document, you may follow <a href="https://github.com/rstudio/tufte/raw/master/inst/rmarkdown/templates/tufte_html/skeleton/skeleton.Rmd">this link to Github</a>, use the wizard in RStudio IDE (<code>File -&gt; New File -&gt; R Markdown -&gt; From Template</code>), or open the Rmd file in the package:</p>
+<pre class="r"><code class="r"><span class="identifier">file.edit</span><span class="paren">(</span>
+  <span class="identifier">tufte</span><span class="operator">:</span><span class="operator">:</span><span class="operator">:</span><span class="identifier">template_resources</span><span class="paren">(</span>
+    <span class="string">'tufte_html'</span>, <span class="string">'..'</span>, <span class="string">'skeleton'</span>, <span class="string">'skeleton.Rmd'</span>
+  <span class="paren">)</span>
+<span class="paren">)</span></code></pre>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div></body></html>
